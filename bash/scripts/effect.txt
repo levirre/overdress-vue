@@ -1,0 +1,2 @@
+Name | Effect
+Shadow_Army_Token |{{Token|Shadow}}
