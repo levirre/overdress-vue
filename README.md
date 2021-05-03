@@ -44,6 +44,7 @@ mount is a Proxy handler for mutable data that will update the real html tag
 
 # overdress-vue
 ## Project setup
+# run \\wsl2$ to access drectory
 ```
 yarn install
 ```
