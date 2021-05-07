@@ -1,15 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<NavBar Dropdown="Dropdown"/>
+
+  
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+//import a component vue file, a modular html file that has an export default
+//use the import above and it will load the entire imported template as html. 
+//Has builtin hot reload with javascript
+// https://vuejs.org/v2/guide/single-file-components.html
+import NavBar from './components/NavBar.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavBar,
+    
   }
 }
 </script>
@@ -21,6 +27,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
 }
+body{
+  margin: 0;
+}
+
 </style>
