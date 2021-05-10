@@ -91,7 +91,7 @@ export default {
 
 
 #CardGallery{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     border-left: 2px solid goldenrod;
     display: inline-flex;
@@ -99,7 +99,7 @@ export default {
     flex-wrap: wrap;
     margin-top: 8vh;
     padding-top:8vh;
-    
+    padding-bottom: 20vh;
     justify-content: center;
     z-index: 2;
     overflow-y: scroll;

@@ -62,7 +62,7 @@ body{
   margin-top: 5vh;
   display: flex;
   flex-direction: row;
-  height: 90vh;
+  height: 100vh;
   
   
 }
