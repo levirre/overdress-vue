@@ -76,7 +76,8 @@ export default {
     z-index: 10;
     display: flex;
     flex-direction: row;
-    margin-top: 10vh;
+    margin-top: 6vh;
+    margin-bottom: 1vh;
     
     
 }
@@ -93,7 +94,7 @@ export default {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 10px;
 }
 
 /* Track */
