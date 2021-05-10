@@ -90,11 +90,11 @@ export default {
 #Set{
     width: 100%;
     height: 60%;
-    background-color: whitesmoke;
+    
 }
 
 #Nation{
-    background-color:lavender;
+    
     height: 60%;
     width: 100%;
     

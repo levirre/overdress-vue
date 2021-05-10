@@ -2,11 +2,12 @@
     <div class="container">
         
         <div id="searchbar">
-            <input id="input" v-model="message" placeholder="search">   
+            <input id="input" placeholder="search">   
             <span class="material-icons" id="search">search</span>
         </div>
-        <div id="CardGallery">
+        <div id="CardGallery"> 
             <CardComponent/>
+            
         </div>
     </div>
 </template>
@@ -16,9 +17,14 @@ import CardComponent from './CardComponent.vue'
 export default {
     name: "CardGallery",
     components:{
-        CardComponent
+        CardComponent: CardComponent
     }
+
+
 }
+
+
+
 </script>
 
 <style scoped>
@@ -92,7 +98,7 @@ export default {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  
   border-radius: 10px;
 }
 

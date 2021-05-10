@@ -1,20 +1,34 @@
 <template>
-    
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+    <div>
+
+   <img class ="card" :src='test'>
+   <img class ="card" :src='test'>
+   <img class ="card" :src='test'>
+   <img class ="card" :src='test'>
+   <img class ="card" :src='test'>
+   <img class ="card" :src='test'>
+   <img class ="card" :src='test'>
+   <img class ="card" :src='test'>
+   <img class ="card" :src='test'>
+   <img class ="card" :src='test'>
+    </div>
 </template>
 
 <script>
+
+
 export default {
-    name:"CardComponent"
-}
+    name:"CardComponent",
+    
+    data(){
+        return{
+        test: require('../assets/logo.png')
+        }
+    }
+
+};
+
+
 </script>
 
 <style scoped>
@@ -24,6 +38,7 @@ export default {
     min-height: 350px;
     max-width: 230px;
     max-height: 350px;
-    background-color: teal;
+    
+    
 }
 </style>

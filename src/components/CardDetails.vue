@@ -46,7 +46,7 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: blanchedalmond;
+    
     width: 20%;
     margin-top:2vh;
     font-family: 'Barlow Condensed', sans-serif;
@@ -121,8 +121,5 @@ export default {
     max-height: 100%;
 }
 
-.card-remove{
-    
-}
 
 </style>
