@@ -57,7 +57,7 @@ export default {
 .container{
     display: flex;
     flex-direction: column;
-    
+    padding-left: 1em;
     
     width: 15vw;
     
@@ -73,7 +73,7 @@ export default {
 }
 .segment{
     margin-top:1em;
-    z-index: -2;
+    
     overflow: hidden;
 }
 
@@ -163,7 +163,7 @@ export default {
     width: 400px;
     margin-left: .5em;
     padding-top: 40px;
-    z-index: -1;
+    
     margin-right: 1em;
     border-bottom: 3px solid goldenrod;
 }

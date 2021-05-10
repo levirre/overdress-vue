@@ -22,6 +22,7 @@ import NavBar from './components/NavBar.vue'
 import FilterBar from './components/FilterBar_Right.vue'
 import CardGallery from './components/CardGallery.vue'
 import CardDetails from './components/CardDetails.vue'
+
 export default {
   name: 'App',
   components: {
@@ -67,10 +68,10 @@ body{
 .outer{
   display: flex;
   flex-direction: column;
-  
-  
-  
 }
 
+.material-icons{
+  cursor: pointer;
+}
 
 </style>

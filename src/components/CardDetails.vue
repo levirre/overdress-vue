@@ -8,11 +8,13 @@
             </div>
             <div id="deck_list">
                 <div class="card">
+                    <div class="material-icons card-remove">horizontal_rule</div>
                     <div class="CardGrade">3</div>
                     <div class="CardName"><span class="spanName">Hades Dragon Deity of Resentment, Gallmageheld </span> </div>
                     <div class="CardAmount">4</div>
                 </div>
                 <div class="card">
+                    <div class="material-icons">horizontal_rule</div>
                     <div class="CardGrade">3</div>
                     <div class="CardName"><span class="spanName">Varina Valiente</span> </div>
                     <div class="CardAmount">4</div>
@@ -99,9 +101,7 @@ export default {
     font-size: 20px;
     align-items: center;
     margin-bottom: .1em;
-    
-    
-   
+    cursor: pointer;
 }
 
 .CardName{
@@ -114,23 +114,14 @@ export default {
     
     
 }
-
-.spanName{
-    
-    
-    
-    
-}
-
-
-
-
 .CardAmount ,.CardGrade{
     
     min-width: 16px;
     min-height: 100%;
     max-height: 100%;
-    
+}
+
+.card-remove{
     
 }
 
