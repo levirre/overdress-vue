@@ -1,17 +1,8 @@
 <template>
-    <div>
-
-   <img class ="card" :src='test'>
-   <img class ="card" :src='test'>
-   <img class ="card" :src='test'>
-   <img class ="card" :src='test'>
-   <img class ="card" :src='test'>
-   <img class ="card" :src='test'>
-   <img class ="card" :src='test'>
-   <img class ="card" :src='test'>
-   <img class ="card" :src='test'>
-   <img class ="card" :src='test'>
-    </div>
+<div class="CardContainer" v-for="card in cards" v-bind:key="card.id">
+    {{card.name}}
+    <img  class="card" :src="card.img"> 
+</div>
 </template>
 
 <script>
@@ -19,15 +10,23 @@
 
 export default {
     name:"CardComponent",
+    props:['card'],
     
     data(){
         return{
-        test: require('../assets/logo.png')
-        }
+        cards:[
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"}
+            
+        ]}
     }
 
 };
+/*
 
+
+
+*/
 
 </script>
 
@@ -40,5 +39,15 @@ export default {
     max-height: 350px;
     
     
+}
+
+.CardContainer{
+    margin:10px;
+    min-width: 230px;
+    min-height: 350px;
+    max-width: 230px;
+    max-height: 350px;
+    font-size: 18px;
+    text-align: center;
 }
 </style>
