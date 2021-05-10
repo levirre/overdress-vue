@@ -14,7 +14,7 @@
                 </div>
                                 <div class="card">
                     <div class="CardGrade">3</div>
-                    <div class="CardName">Hades Dragon Deity of Resentment, Gallmageheld </div>
+                    <div class="CardName">Hades Dra </div>
                     <div class="CardAmount">4</div>
                 </div>
             </div>
