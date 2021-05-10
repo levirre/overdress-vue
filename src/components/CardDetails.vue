@@ -90,7 +90,7 @@ export default {
 }
 
 .card{
-    width: 100%;
+    min-width: 100%;
     background-color: silver;
     min-height: 2.5em;
     display: flex;
@@ -105,8 +105,8 @@ export default {
 }
 
 .CardGrade{
-    
-    width: 2.5em;
+    float:left;
+    min-width: 2.5em;
     height: 100%;
     
     
@@ -125,7 +125,7 @@ export default {
 
 .CardAmount{
     
-    width: 2.5em;
+    min-width: 2.5em;
     height: 100%;
     
     
