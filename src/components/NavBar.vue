@@ -1,8 +1,15 @@
 <template>
     <div class="navbar">
-    <div class="Logo">OVERDRESS</div>
-    <div class="Decks">Decks ▽</div>
+      <div class="nav_ele" id="logo">OverDress</div>
+      <ul class="nav_list">
+        <li class="nav_ele">Decks <span id="triangle">▽</span></li>
+      </ul>
     </div>
+    
+    
+
+
+
 </template>
 
 <script>
@@ -22,62 +29,56 @@ export default {
 
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.Cards > img{
-  width: 200px;
-  height: 320px;
-}
 
 .navbar{
-    padding: 1em;
-    background-color: #42b983;
-    width: 100vmax;
-    margin: 0;
-    overflow: hidden;
-    
+  background-color: linen;
+  font-size: 36px;
+  height: 54px;
+  position: absolute;
+  width: 100%;
+  
+}
+.nav_list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  float: right;
+  margin-right: 20vw;
+  
 }
 
-.navbar > * {
-    display: inline;
-    margin-left: 1em;
-    margin-right: 1em;
-    font-size: 2em;
-    
-    background-color: antiquewhite;
-    position:relative;
-    
-    
+.nav_list > li {
+  display: inline;
+ 
+
+
 }
 
-.Decks{
-    height: 100vh;
-    background-color: red;
+#logo{
+  float: left;
+  margin-left: 10vw;
 }
 
+.nav_ele{
+  padding-top: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .5s ease-out 30ms;
+  
+}
 
+.nav_ele:hover{
+  background-color: red;
+}
 
+#triangle{
+  font-size: 0.5em;
+}
 
-
-.Logo {
-    float: left;
-    font-style: italic;
-    font-size: 2.5em;
-    
-
-    
+.container{
+  display: flex;
 }
 
 </style>
