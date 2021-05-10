@@ -59,7 +59,7 @@ export default {
     flex-direction: column;
     padding-left: 1em;
     
-    width: 15vw;
+    width: 12%;
     
     color: white;
     font-family: 'Barlow Condensed', sans-serif;

@@ -2,8 +2,8 @@
 
 <div class="outer"><NavBar/>
   <div class="main">
-    <CardDetails/>
-    <CardGallery/>
+    <CardDetails />
+    <CardGallery />
     <FilterBar/>
 
   </div>
@@ -77,5 +77,10 @@ body{
   cursor: pointer;
   color:white;
 }
+
+
+
+
+
 
 </style>

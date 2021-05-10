@@ -47,12 +47,17 @@ export default {
     flex-direction: column;
     text-align: center;
     
-    width: 20%;
+    width: 16%;
     margin-top:2vh;
     font-family: 'Barlow Condensed', sans-serif;
-    padding-right: 2em;
-    padding-left: 2em;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    padding-right: 1.5vw;
     
+}
+
+#deck_list{
+    width: 100%;
 }
 
 .segment{

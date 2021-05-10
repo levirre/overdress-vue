@@ -6,8 +6,7 @@
             <span class="material-icons" id="search">search</span>
         </div>
         <div id="CardGallery"> 
-            <Cards/>
-            
+            <Cards id="Cards"/>
         </div>
     </div>
 </template>
@@ -31,12 +30,16 @@ export default {
 .container{
     
     width: 100%;
-    height: 96vh;
-    display: flex;
+    
+    display: inline-flex;
     flex-direction: column;
     font-size: 36px;
     color: sienna;
     align-items: center;
+   
+    
+    
+    
 }
 
 .ruler{
@@ -56,7 +59,7 @@ export default {
     position: relative;
     
     padding-top: 1vh;
-    
+    z-index: 1;
 
 }
 
@@ -73,26 +76,38 @@ export default {
 
 
 #searchbar{
-    z-index: 10;
-    display: flex;
+    
+    display: inline-flex;
     flex-direction: row;
-    margin-top: 6vh;
-    margin-bottom: 1vh;
+    margin-top: 2vh;
+   
+ 
+
+    position:absolute;
     
     
 }
+
+
 
 #CardGallery{
     height: 100%;
     width: 100%;
     border-left: 2px solid goldenrod;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 8vh;
+    padding-top:8vh;
+    
+    justify-content: center;
+    z-index: 2;
     overflow-y: scroll;
-
     
 }
+
+
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -110,5 +125,7 @@ export default {
   background:whitesmoke;
   border-radius: 10px;
 }
+
+
 
 </style>
