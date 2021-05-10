@@ -1,7 +1,8 @@
 <template>
 <div class="CardContainer" v-for="card in cards" v-bind:key="card.id">
-    {{card.name}}
+     
     <img  class="card" :src="card.img"> 
+   
 </div>
 </template>
 
@@ -16,10 +17,18 @@ export default {
         return{
         cards:[
             {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
-            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"}
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
+            {id:0, img: require('../assets/logo.png'), name:"Varina Valiente"},
             
         ]}
-    }
+    },
+    methods:{}
 
 };
 /*
@@ -42,7 +51,7 @@ export default {
 }
 
 .CardContainer{
-    margin:10px;
+    margin:20px;
     min-width: 230px;
     min-height: 350px;
     max-width: 230px;

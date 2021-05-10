@@ -26,11 +26,11 @@
                 <div class="ruler"></div>
             </div>
             <div id="NationList">
-                <div class="NationName">Keter Sanctuary</div>
-                <div class="NationName">Dragon Empire</div>
-                <div class="NationName">Brandt Gate</div>
-                <div class="NationName">Dark States</div>
-                <div class="NationName">Stoicheia</div>
+                <div class="NationName" id="Keter">Keter Sanctuary</div>
+                <div class="NationName" id="Dragon">Dragon Empire</div>
+                <div class="NationName" id="Brandt">Brandt Gate</div>
+                <div class="NationName" id="Dark">Dark States</div>
+                <div class="NationName" id="Stoi">Stoicheia</div>
             </div>
         </div>
 
@@ -61,6 +61,7 @@ export default {
     
     width: 15vw;
     
+    color: white;
     font-family: 'Barlow Condensed', sans-serif;
     padding-right: 2em;
     
@@ -93,25 +94,7 @@ export default {
     
 }
 
-#Nation{
-    
-    height: 60%;
-    width: 100%;
-    
-}
 
-#NationList{
-    font-size: 24px;
-    
-    
-    padding-top: .2em;
-    padding-left: 30%;
-}
-
-.NationName{
-    padding-top: 2px;
-    text-align: left;
-}
 
 
 
@@ -165,7 +148,52 @@ export default {
     padding-top: 40px;
     
     margin-right: 1em;
-    border-bottom: 3px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+}
+
+#Nation{
+    
+    height: 60%;
+    width: 100%;
+
+    
+}
+
+#NationList{
+    font-size: 24px;
+    
+    
+    padding-top: .2em;
+    padding-left: 5%;
+}
+
+.NationName{
+    padding-top: 2px;
+    text-align: right;
+    
+    color: white;
+    padding-left: 5%;
+    padding-bottom: 12px;
+}
+
+#Keter{
+    color:gold
+}
+
+#Dragon{
+    color:tomato
+}
+
+#Brandt{
+    color:ivory
+}
+
+#Dark{
+    color: #40A9F5;
+}
+
+#Stoi{
+    color: greenyellow;
 }
 
 

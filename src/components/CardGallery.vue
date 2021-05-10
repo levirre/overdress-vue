@@ -6,7 +6,7 @@
             <span class="material-icons" id="search">search</span>
         </div>
         <div id="CardGallery"> 
-            <CardComponent/>
+            <Cards/>
             
         </div>
     </div>
@@ -17,7 +17,7 @@ import CardComponent from './CardComponent.vue'
 export default {
     name: "CardGallery",
     components:{
-        CardComponent: CardComponent
+        Cards: CardComponent
     }
 
 
@@ -31,7 +31,7 @@ export default {
 .container{
     
     width: 100%;
-    
+    height: 96vh;
     display: flex;
     flex-direction: column;
     font-size: 36px;
@@ -47,14 +47,14 @@ export default {
     
     
     margin-right: 1em;
-    border-bottom: 3px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
 }
 
 #search{
    
     font-size: 48px;
     position: relative;
-    color: black;
+    
     padding-top: 1vh;
     
 
@@ -85,11 +85,13 @@ export default {
 #CardGallery{
     height: 100%;
     width: 100%;
-    background-color: seashell;
+    border-left: 2px solid goldenrod;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
+
+    
 }
 
 /* width */
@@ -105,7 +107,7 @@ export default {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background:tomato;
+  background:whitesmoke;
   border-radius: 10px;
 }
 

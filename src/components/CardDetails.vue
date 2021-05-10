@@ -88,7 +88,7 @@ export default {
     padding-top: 40px;
     z-index: -1;
     margin-right: 1em;
-    border-bottom: 3px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
 }
 
 .card{

@@ -44,7 +44,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  color: #2c3e50;
+  color: white;
   
   width: 100vw;
   
@@ -54,7 +54,8 @@ export default {
 }
 body{
   margin: 0;
-  
+  background-color: #353D40;
+  overflow: hidden;
 }
 
 .main{
@@ -63,15 +64,18 @@ body{
   flex-direction: row;
   height: 90vh;
   
+  
 }
 
 .outer{
   display: flex;
   flex-direction: column;
+  background-color: #353D40;
 }
 
 .material-icons{
   cursor: pointer;
+  color:white;
 }
 
 </style>

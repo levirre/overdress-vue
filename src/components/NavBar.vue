@@ -31,7 +31,7 @@ export default {
 <style scoped>
 
 .navbar{
-  background-color: linen;
+  border-bottom: 2px solid goldenrod;
   font-size: 36px;
   height: 54px;
   position: absolute;
