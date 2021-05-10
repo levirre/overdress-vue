@@ -9,12 +9,12 @@
             <div id="deck_list">
                 <div class="card">
                     <div class="CardGrade">3</div>
-                    <div class="CardName">Hades Dragon Deity of Resentment, Gallmageheld </div>
+                    <div class="CardName"><span class="spanName">Hades Dragon Deity of Resentment, Gallmageheld </span> </div>
                     <div class="CardAmount">4</div>
                 </div>
-                                <div class="card">
+                <div class="card">
                     <div class="CardGrade">3</div>
-                    <div class="CardName">Hades Dra </div>
+                    <div class="CardName"><span class="spanName">Varina Valiente</span> </div>
                     <div class="CardAmount">4</div>
                 </div>
             </div>
@@ -91,42 +91,45 @@ export default {
 
 .card{
     min-width: 100%;
-    background-color: silver;
-    min-height: 2.5em;
+    min-height: 100%;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 24px;
+    font-size: 20px;
     align-items: center;
     margin-bottom: .1em;
     
-
     
-}
-
-.CardGrade{
-    float:left;
-    min-width: 2.5em;
-    height: 100%;
-    
-    
-    
-    
+   
 }
 
 .CardName{
+    background-color: silver;
     
-    padding-left: .5em;
-    padding-right: .5em;
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 48px;
+    max-height: 48px;
     
-    align-items: center;
     
 }
 
-.CardAmount{
+.spanName{
     
-    min-width: 2.5em;
-    height: 100%;
+    
+    
+    
+}
+
+
+
+
+.CardAmount ,.CardGrade{
+    
+    min-width: 16px;
+    min-height: 100%;
+    max-height: 100%;
     
     
 }
