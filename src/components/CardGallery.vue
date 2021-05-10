@@ -2,7 +2,7 @@
     <div class="container">
         
         <div id="searchbar">
-            <input id="input" v-model="message" placeholder="edit me">   
+            <input id="input" v-model="message" placeholder="search">   
             <span class="material-icons" id="search">search</span>
         </div>
         <div id="CardGallery">
