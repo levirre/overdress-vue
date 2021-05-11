@@ -1,9 +1,18 @@
 <template>
-<div class="container"></div>
-<div class="CardContainer" v-for="card in cards" v-bind:key="card.id">
-    <a :href="card.id" ><img  class="card" :src="card.img"> </a>
-   
+<div class="container">
+    <div id="searchbar">
+        <input id="input" v-model="search" placeholder="search">   
+        <span class="material-icons" id="search">search</span>
+    </div>
+    
+    <div id="CardGallery">    
+        <div class="CardContainer" v-for="card in filteredList" v-bind:key="card.id">
+            <a :href="card.id" target="_blank" ><img  class="card" :src="card.img"> </a>
+        </div>
+    </div>
+
 </div>
+
 </template>
 
 <script>
@@ -11,30 +20,27 @@
 
 export default {
     name:"CardComponent",
-    props:['card'],
+    
     
     data(){
         return{
+        search:"",
         cards:[
             {id:"D-SD01-001", img: require('../img/D-SD01/D-SD01-001.png')},
             {id:"D-SD01-002", img: require('../img/D-SD01/D-SD01-002.png')},
-            {id:"D-SD01-003", img: require('../img/D-SD01/D-SD01-003.png')},
-            {id:"D-SD01-004", img: require('../img/D-SD01/D-SD01-004.png')},
-            {id:"D-SD01-005", img: require('../img/D-SD01/D-SD01-005.png')},
-            {id:"D-SD01-006", img: require('../img/D-SD01/D-SD01-006.png')},
-            {id:"D-SD01-007", img: require('../img/D-SD01/D-SD01-007.png')},
-            {id:"D-SD01-008", img: require('../img/D-SD01/D-SD01-008.png')},
-            {id:"D-SD01-009", img: require('../img/D-SD01/D-SD01-009.png')},
-            {id:"D-SD01-010", img: require('../img/D-SD01/D-SD01-010.png')},
-            {id:"D-SD01-011", img: require('../img/D-SD01/D-SD01-011.png')},
-            {id:"D-SD01-012", img: require('../img/D-SD01/D-SD01-012.png')},
-            {id:"D-SD01-013", img: require('../img/D-SD01/D-SD01-013.png')},
-            {id:"D-SD01-014", img: require('../img/D-SD01/D-SD01-014.png')},
-            {id:"D-SD01-015", img: require('../img/D-SD01/D-SD01-015.png')},
+
+
             
         ]}
     },
-    methods:{}
+    computed: {
+        
+        filteredList(){
+            
+            return this.cards.filter(card => {
+                return card.id.includes(this.search)})
+        }
+    }
 
 };
 /*
@@ -56,11 +62,6 @@ export default {
     overflow:visible;
     z-index: 2;
     
-    
-    
-    
-    
-    
 }
 
 .card:hover{
@@ -70,19 +71,99 @@ export default {
     
 }
 
+.container{
+    
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    color: sienna;
+    align-items: center;
+}
+
+.ruler{
+    
+    width: 410px;
+    margin-left: .5em;
+
+    
+    
+    margin-right: 1em;
+    border-bottom: 2px solid goldenrod;
+}
+
+#search{
+   
+    font-size: 48px;
+    position: relative;
+    
+    padding-top: 1vh;
+    z-index: 1;
+
+}
+
+#input{
+    margin-left: 1vw;
+    font-size: 24px;
+    width: 24em;
+    border:none;
+    border-bottom: 3px solid goldenrod;
+    outline: none;
+
+}
 
 
-.CardContainer{
-    margin:20px;
-    min-width: 230px;
-    min-height: 350px;
-    max-width: 230px;
-    max-height: 350px;
-    font-size: 18px;
-    text-align: center;
+
+#searchbar{
+    
+    display: inline-flex;
+    flex-direction: row;
+    margin-top: 2vh;
+    
+   
+ 
+
+    position:absolute;
     
     
+}
+
+
+
+#CardGallery{
+    height: 100vh;
+    width: 100%;
+    border-left: 2px solid goldenrod;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 8vh;
+    padding-top:8vh;
+    padding-bottom: 20vh;
+    justify-content: center;
+    z-index: 2;
+    overflow-y: scroll;
     
-    
+}
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:whitesmoke;
+  border-radius: 10px;
 }
 </style>

@@ -1,12 +1,9 @@
 <template>
     <div class="container">
         
-        <div id="searchbar">
-            <input id="input" placeholder="search">   
-            <span class="material-icons" id="search">search</span>
-        </div>
+
         <div id="CardGallery"> 
-            <Cards id="Cards"/>
+            <Cards/>
         </div>
     </div>
 </template>

@@ -3,7 +3,7 @@
 <div class="outer"><NavBar/>
   <div class="main">
     <CardDetails />
-    <CardGallery />
+    <CardComponent />
     <FilterBar/>
 
   </div>
@@ -20,7 +20,7 @@
 // https://vuejs.org/v2/guide/single-file-components.html
 import NavBar from './components/NavBar.vue'
 import FilterBar from './components/FilterBar_Right.vue'
-import CardGallery from './components/CardGallery.vue'
+import CardComponent from './components/CardComponent.vue'
 import CardDetails from './components/CardDetails.vue'
 
 export default {
@@ -28,7 +28,7 @@ export default {
   components: {
     NavBar,
     FilterBar,
-    CardGallery,
+    CardComponent,
     CardDetails
     
   }
