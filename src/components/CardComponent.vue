@@ -6,8 +6,10 @@
     </div>
     
     <div id="CardGallery">    
-        <div class="CardContainer" v-for="card in filteredList" v-bind:key="card.id">
-            <a :href="card.id" target="_blank" ><img  class="card" :src="card.img"> </a>
+        
+        <div class="CardContainer" v-for="set in filteredList" v-bind:key="set.id">
+           <img class="card" :src="cardRender(set.ID)">
+            
         </div>
     </div>
 
@@ -16,32 +18,58 @@
 </template>
 
 <script>
+import {db} from '../firebase.js'
+var cards = db.collection("cards");
 
+/*
+function cardsInit(){
+    cards.get().then((snapshot) => {snapshot.forEach(doc=>{
+        console.log(doc.data())
+    })})
+}
 
+cardsInit()
+*/
 export default {
+
+    el:'#CardGallery',
     name:"CardComponent",
     
     
     data(){
+        
         return{
+        img: "../img/D-SD01/D-SD01-001.png",
         search:"",
-        cards:[
-            {id:"D-SD01-001", img: require('../img/D-SD01/D-SD01-001.png')},
-            {id:"D-SD01-002", img: require('../img/D-SD01/D-SD01-002.png')},
-
-
-            
-        ]}
+        sets:[],
+        }
+        
+    },
+    created(){
+        cards.get().then(snapshot =>{
+            snapshot.forEach(doc => {
+                const data ={
+                    ID: doc.data().ID,
+                    NAME: doc.data().NAME
+                }
+                this.sets.push(data)
+            })
+        })
     },
     computed: {
         
         filteredList(){
             
-            return this.cards.filter(card => {
-                return card.id.includes(this.search)})
+            return this.sets.filter(sets => {
+                return sets.ID.includes(this.search)})
         }
+    },
+    methods:{
+            cardRender: function(ID){
+                return require(`../img/D-SD01/${ID}.png`)
+            }
+        
     }
-
 };
 /*
 
@@ -95,11 +123,12 @@ export default {
 
 #search{
    
-    font-size: 48px;
+    font-size: 36px;
     position: relative;
     
     padding-top: 1vh;
     z-index: 1;
+   
 
 }
 
@@ -120,6 +149,7 @@ export default {
     display: inline-flex;
     flex-direction: row;
     margin-top: 2vh;
+    
     
    
  
@@ -144,6 +174,7 @@ export default {
     justify-content: center;
     z-index: 2;
     overflow-y: scroll;
+    
     
 }
 

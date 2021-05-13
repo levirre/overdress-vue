@@ -1,7 +1,10 @@
 <template>
     <div class="container">
         
-
+        <div id="searchbar">
+            <input id="input" v-model="search" placeholder="search">   
+            <span class="material-icons" id="search">search</span>
+        </div>
         <div id="CardGallery"> 
             <Cards/>
         </div>

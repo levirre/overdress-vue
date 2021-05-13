@@ -18,6 +18,7 @@
 //use the import above and it will load the entire imported template as html. 
 //Has builtin hot reload with javascript
 // https://vuejs.org/v2/guide/single-file-components.html
+
 import NavBar from './components/NavBar.vue'
 import FilterBar from './components/FilterBar_Right.vue'
 import CardComponent from './components/CardComponent.vue'
