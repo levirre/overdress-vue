@@ -1,18 +1,10 @@
 import { firebase} from '@firebase/app'
+import {credentials} from '../credentials.js'
 // Required for side-effects
 require("firebase/firestore");
 // Initialize Cloud Firestore through Firebase
-var firebaseConfig = {
-    apiKey: "AIzaSyBk8r_vQt76tPfPBh3BrCQwlP2FlnHvVRk",
-    authDomain: "imouto-efe37.firebaseapp.com",
-    databaseURL: "https://imouto-efe37.firebaseio.com",
-    projectId: "imouto-efe37",
-    storageBucket: "imouto-efe37.appspot.com",
-    messagingSenderId: "556969340680",
-    appId: "1:556969340680:web:cdfeede4a48c906b1b06bd"
-  };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(credentials);
 
 var db = firebase.firestore();
 /*
