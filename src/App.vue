@@ -1,6 +1,6 @@
 <template>
 
-<div class="outer"><NavBar/>
+<div id="app" class="outer"><NavBar/>
   <div class="main">
     <CardDetails />
     <CardComponent />
@@ -19,10 +19,17 @@
 //Has builtin hot reload with javascript
 // https://vuejs.org/v2/guide/single-file-components.html
 
+/*
+Routing in a single file component 
+where do I put routes
+//how do I render a different page not in App
+*/
+
 import NavBar from './components/NavBar.vue'
 import FilterBar from './components/FilterBar_Right.vue'
 import CardComponent from './components/CardComponent.vue'
 import CardDetails from './components/CardDetails.vue'
+
 
 export default {
   name: 'App',
@@ -30,7 +37,8 @@ export default {
     NavBar,
     FilterBar,
     CardComponent,
-    CardDetails
+    CardDetails,
+    
     
   }
 }

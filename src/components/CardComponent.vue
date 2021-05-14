@@ -6,7 +6,7 @@
     </div>
     
     <div id="CardGallery">    
-        
+        <a href="test"><button>hello</button></a>
         <div class="CardContainer" v-for="set in filteredList" v-bind:key="set.id">
            <img class="card" :src="cardRender(set.ID)">
             
@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import {db} from '../firebase.js'
-var cards = db.collection("cards");
-
+//import {db} from '../firebase.js'
+//var cards = db.collection("cards");
+import {myMixin} from './CardAssembler.js'
 /*
 function cardsInit(){
     cards.get().then((snapshot) => {snapshot.forEach(doc=>{
@@ -34,7 +34,7 @@ export default {
 
     el:'#CardGallery',
     name:"CardComponent",
-    
+    mixins: [myMixin],
     
     data(){
         
@@ -45,6 +45,7 @@ export default {
         }
         
     },
+    /*
     created(){
         cards.get().then(snapshot =>{
             snapshot.forEach(doc => {
@@ -55,7 +56,9 @@ export default {
                 this.sets.push(data)
             })
         })
+    
     },
+    */
     computed: {
         
         filteredList(){
@@ -65,10 +68,11 @@ export default {
         }
     },
     methods:{
+        /*
             cardRender: function(ID){
                 return require(`../img/D-SD01/${ID}.png`)
             }
-        
+        */
     }
 };
 /*
