@@ -69,7 +69,7 @@ export default {
 
 #Filter{
     
-    height: 15%;
+    
     width: 100%;
 }
 .segment{
