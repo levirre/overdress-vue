@@ -75,7 +75,7 @@ export default {
     methods:{
         
             cardRender: function(SET,ID){
-                return require(`../img/${SET}/${ID}.png`)
+                return require(`../img/${SET}/${ID}.webp`)
             }
         
     }
