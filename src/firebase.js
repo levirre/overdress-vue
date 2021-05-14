@@ -6,7 +6,7 @@ var credentials = require('../credentials.json')
 require("firebase/firestore");
 // Initialize Cloud Firestore through Firebase
   // Initialize Firebase
-  firebase.initializeApp(credentials[1]);
+  firebase.initializeApp(credentials);
 
 var db = firebase.firestore();
 /*

@@ -8,7 +8,7 @@
     <div id="CardGallery">    
         
         <div class="CardContainer" v-for="set in filteredList" v-bind:key="set.id">
-           <img class="card" :src="cardRender(set.ID)">
+           <img class="card" :src="cardRender(set.SET,set.ID)">
             
         </div>
     </div>
@@ -39,7 +39,6 @@ export default {
     data(){
         
         return{
-        img: "../img/D-SD01/D-SD01-001.png",
         search:"",
         sets:[],
         }
@@ -50,11 +49,17 @@ export default {
         cards.get().then(snapshot =>{
             snapshot.forEach(doc => {
                 const data ={
+                    SET: doc.data().SET,
                     ID: doc.data().ID,
-                    NAME: doc.data().NAME
+                    NAME: doc.data().NAME,
+                    GRADE: doc.data().GRADE,
+                    NATION: doc.data().NATION,
+                    TYPE: doc.data().TYPE,
+                    RARITY: doc.data().RARITY,
                 }
                 this.sets.push(data)
-            })
+            });
+            console.log(this.sets)
         })
     
     },
@@ -62,15 +67,15 @@ export default {
     computed: {
         
         filteredList(){
-            
+            // TODO: have filter search through selected field and not just name
             return this.sets.filter(sets => {
-                return sets.ID.includes(this.search)})
+                return sets.NAME.toLowerCase().includes(this.search.toLowerCase())})
         }
     },
     methods:{
         
-            cardRender: function(ID){
-                return require(`../img/D-SD01/${ID}.png`)
+            cardRender: function(SET,ID){
+                return require(`../img/${SET}/${ID}.png`)
             }
         
     }

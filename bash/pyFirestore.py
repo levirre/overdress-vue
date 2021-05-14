@@ -17,11 +17,6 @@ default_app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 cards_ref = db.collection(u'cards')
 docs = cards_ref.stream()
-data = {
-    u'name': u'Los Angeles',
-    u'state': u'CA',
-    u'country': u'USA'
-}
 
 def addCard(BOOSTER):
     '''
@@ -40,6 +35,7 @@ def addCard(BOOSTER):
         card = Card(BOOSTER,ID,NAME,GRADE,NATION,TYPE,RARITY)
         #print(vars(card))
         cards_ref.document(f'{card.ID}').set(vars(card))
+    f.close()
     
 
 
