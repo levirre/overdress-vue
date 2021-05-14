@@ -6,6 +6,17 @@
 </template>
 
 <script>
+/*
+How do I parse D-SD01.txt
+ID|NAME|GRADE|NATION|TYPE|RARITY
+D-BT01-001|Vairina_Valiente|3|Dragon_Empire|Persona_Ride|RRR+SP
+
+
+
+
+
+*/
+console.log(process.env.apiKey);
 import {myMixin} from '../components/CardAssembler.js'
 export default {
     name: "SetCreate",
