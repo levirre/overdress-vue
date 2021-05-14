@@ -18,8 +18,8 @@
 </template>
 
 <script>
-//import {db} from '../firebase.js'
-//var cards = db.collection("cards");
+import {db} from '../firebase.js'
+var cards = db.collection("cards");
 import {myMixin} from './CardAssembler.js'
 /*
 function cardsInit(){
@@ -45,7 +45,7 @@ export default {
         }
         
     },
-    /*
+    
     created(){
         cards.get().then(snapshot =>{
             snapshot.forEach(doc => {
@@ -58,7 +58,7 @@ export default {
         })
     
     },
-    */
+    
     computed: {
         
         filteredList(){
@@ -68,11 +68,11 @@ export default {
         }
     },
     methods:{
-        /*
+        
             cardRender: function(ID){
                 return require(`../img/D-SD01/${ID}.png`)
             }
-        */
+        
     }
 };
 /*

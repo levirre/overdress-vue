@@ -2,7 +2,7 @@
     <div class="navbar">
       <div class="nav_ele" id="logo"><router-link to="/">OverDress</router-link></div>
       <ul class="nav_list">
-        <li class="nav_ele"><router-link to="/about">About</router-link></li>
+        <li class="nav_ele"><router-link to="/set">About</router-link></li>
         <li class="nav_ele">Decks <span id="triangle">▽</span></li>
       </ul>
     </div>
