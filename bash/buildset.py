@@ -5,7 +5,7 @@
 import sys
 import os
 import subprocess
-from setparse import construct
+from .setparse import construct
 import time
 print('\n')
 time.sleep(2)

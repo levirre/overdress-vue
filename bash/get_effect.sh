@@ -4,7 +4,7 @@
 # $0            $1      $2
 # scriptname    arg1     arg2   
 
-echo "Name | Effect" >> effect.txt
+#echo "Name | Effect" >> effect.txt
 for name in $1
 do
     echo $name
