@@ -1,6 +1,6 @@
 <template>
-
-<div id="app" class="outer"><NavBar/>
+<h1>Hello</h1>
+<div class="outer"><NavBar/>
   <div class="main">
     <CardDetails />
     <CardComponent />
@@ -25,10 +25,10 @@ where do I put routes
 //how do I render a different page not in App
 */
 
-import NavBar from './components/NavBar.vue'
-import FilterBar from './components/FilterBar_Right.vue'
-import CardComponent from './components/CardComponent.vue'
-import CardDetails from './components/CardDetails.vue'
+import NavBar from '../components/NavBar.vue'
+import FilterBar from '../components/FilterBar_Right.vue'
+import CardComponent from '../components/CardComponent.vue'
+import CardDetails from '../components/CardDetails.vue'
 
 
 export default {

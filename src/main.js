@@ -1,5 +1,6 @@
 import {createApp } from 'vue'
-import App from './App.vue'
+import Sandbox from './sandbox.vue'
+import router from './router'
 
 
-createApp(App).mount('#app')
+createApp(Sandbox).use(router).mount('#app')
