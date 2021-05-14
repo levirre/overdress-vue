@@ -58,7 +58,7 @@ export default {
     display: flex;
     flex-direction: column;
     padding-left: 1em;
-    
+    height: 100%;
     width: 12%;
     
     color: white;
