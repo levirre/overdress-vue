@@ -1,36 +1,32 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="./App">App</router-link>
+  <div class="outer">
+    <NavBar/>
+    <router-view/>
   </div>
-  <router-view/>
 </template>
 <script>
+import NavBar from './components/NavBar.vue'
 export default {
-    name: "Sandbox"
+    name: "Sandbox",
+    components: {
+      NavBar,
+    }
 }
+/*
+use router-link to load urls
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> |
+    <router-link to="/App">App</router-link>
+
+They will renter in the <router-view/> above
+*/
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped>
+.outer{
+  display: flex;
+  flex-direction: column;
+  background-color: #353D40;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
+

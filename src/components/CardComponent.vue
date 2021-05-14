@@ -6,7 +6,7 @@
     </div>
     
     <div id="CardGallery">    
-        <a href="test"><button>hello</button></a>
+        
         <div class="CardContainer" v-for="set in filteredList" v-bind:key="set.id">
            <img class="card" :src="cardRender(set.ID)">
             

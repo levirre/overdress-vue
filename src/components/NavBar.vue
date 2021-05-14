@@ -1,7 +1,8 @@
 <template>
     <div class="navbar">
-      <div class="nav_ele" id="logo">OverDress</div>
+      <div class="nav_ele" id="logo"><router-link to="/">OverDress</router-link></div>
       <ul class="nav_list">
+        <li class="nav_ele"><router-link to="/about">About</router-link></li>
         <li class="nav_ele">Decks <span id="triangle">▽</span></li>
       </ul>
     </div>
@@ -33,12 +34,19 @@ export default {
 .navbar{
   border-bottom: 2px solid goldenrod;
   font-size: 36px;
-  height: 54px;
-  position: absolute;
+  height: 64px;
   width: 100%;
   
+  
 }
-.nav_list{
+
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+.nav_list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -47,10 +55,12 @@ export default {
   float: right;
   margin-right: 20vw;
   
+  
 }
 
 .nav_list > li {
   display: inline;
+  color: white;
  
 
 
@@ -66,6 +76,8 @@ export default {
   cursor: pointer;
   user-select: none;
   transition: background-color .5s ease-out 30ms;
+  padding-left: 64px;
+  color:white;
   
 }
 
@@ -77,8 +89,5 @@ export default {
   font-size: 0.5em;
 }
 
-.container{
-  display: flex;
-}
 
 </style>
