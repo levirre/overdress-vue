@@ -1,4 +1,3 @@
-ID|NAME|GRADE|NATION|TYPE|RARITY
 D-SD01-001|Chakrabarthi_Divine_Dragon,_Nirvana|3|Dragon_Empire|Persona_Ride|
 D-SD01-002|Blaze_Maiden,_Reiyu|2|Dragon_Empire||
 D-SD01-003|Blaze_Maiden,_Rino|1|Dragon_Empire||

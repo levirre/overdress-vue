@@ -7,6 +7,7 @@
                 <div class="ruler"></div>
             </div>
             <div id="deck_list">
+                <!--
                 <div class="card">
                     <div class="material-icons card-remove">horizontal_rule</div>
                     <div class="CardGrade">3</div>
@@ -19,6 +20,7 @@
                     <div class="CardName"><span class="spanName">Varina Valiente</span> </div>
                     <div class="CardAmount">4</div>
                 </div>
+                -->
             </div>
         </div>
 
