@@ -61,13 +61,13 @@ export default {
             });
             console.log(this.sets)
         })
-    
     },
     
     computed: {
         
         filteredList(){
             // TODO: have filter search through selected field and not just name
+            
             return this.sets.filter(sets => {
                 return sets.NAME.toLowerCase().includes(this.search.toLowerCase())})
         }

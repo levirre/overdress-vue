@@ -62,3 +62,12 @@ yarn lint
 ```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+```
+TODO: 
+    setup filter name/effect/ID
+    show english effect on side
+    Click Card => push to some dictionary/array => Display array in DeskList.vue
+    Ability to save decklists, upload decklists, open decklists
+    Library of desklists, Sharing decklists by URL
+```
