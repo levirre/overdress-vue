@@ -1,7 +1,7 @@
 <template>
 <div class="container">
     <h1>hello</h1>
-    <button class="ass"><h1  :onclick="createCard">Console</h1></button>
+    <button @click="counter +=1" class="ass"><h1  >{{counter}}</h1></button>
 </div>
 </template>
 

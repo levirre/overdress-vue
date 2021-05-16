@@ -57,8 +57,11 @@ const cardConverter = {
 */
 
 export const myMixin = {
+    data(){
+        return {counter: 0}
+    },
     methods: {
-        createCard() {
+        createCard: function() {
             console.log("hello from CardASsembler")
         }
     }

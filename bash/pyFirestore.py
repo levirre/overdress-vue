@@ -22,8 +22,6 @@ def addCard(BOOSTER):
     '''
     for doc in docs:
         print(f'{doc.id} => {doc.to_dict()}\n')
-        
-    
     '''
     f = open(f"../src/img/{BOOSTER}/{BOOSTER}.txt",'r')
     content = f.read().split('\n')

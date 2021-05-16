@@ -70,4 +70,5 @@ TODO:
     Click Card => push to some dictionary/array => Display array in DeskList.vue
     Ability to save decklists, upload decklists, open decklists
     Library of desklists, Sharing decklists by URL
+    
 ```

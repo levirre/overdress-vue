@@ -7,7 +7,7 @@
                 <div class="ruler"></div>
             </div>
             <div id="deck_list">
-                <!--
+                
                 <div class="card">
                     <div class="material-icons card-remove">horizontal_rule</div>
                     <div class="CardGrade">3</div>
@@ -20,7 +20,7 @@
                     <div class="CardName"><span class="spanName">Varina Valiente</span> </div>
                     <div class="CardAmount">4</div>
                 </div>
-                -->
+                
             </div>
         </div>
 
@@ -28,6 +28,17 @@
 </template>
 
 <script>
+/*
+Post submit? => counter function for each card
+if 0, remove
+max 4
+{"NAME",COUNT}
+
+
+
+*/
+
+
 export default {
     name: "CardDetails",
     data: function () {

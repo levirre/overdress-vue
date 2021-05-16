@@ -4,7 +4,7 @@
   <div class="main">
     
     <CardDetails />
-    <CardComponent />
+    <CardGallery />
     <FilterBar/>
   </div>
 
@@ -27,8 +27,8 @@ where do I put routes
 
 
 import FilterBar from '../components/FilterBar_Right.vue'
-import CardComponent from '../components/CardComponent.vue'
-import CardDetails from '../components/CardDetails.vue'
+import CardGallery from '../components/CardGallery.vue'
+import CardDetails from '../components/DeskList.vue'
 
 
 export default {
@@ -36,7 +36,7 @@ export default {
   components: {
     
     FilterBar,
-    CardComponent,
+    CardGallery,
     CardDetails,
     
     
@@ -54,12 +54,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   
   color: white;
-  
-  
-  
-  
-  
-
 }
 body{
   margin: 0;
