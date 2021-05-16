@@ -7,7 +7,11 @@ const store ={
     }),
     addCount(){
         this.state.count+=1;
+    },
+    subCount(){
+        this.state.count-=1;
     }
+
 }
 
 export default store

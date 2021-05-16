@@ -1,5 +1,5 @@
 <template>
-<div class="card">
+<div @click="deckList" class="card">
     <div class="material-icons card-remove">horizontal_rule</div>
     <div class="CardGrade">3</div>
     <div class="CardName"><span class="spanName">Hades Dragon Deity of Resentment, Gallmageheld </span> </div>
@@ -16,8 +16,7 @@ export default {
         return {
             deck: store.state.deck
         }
-    },
-    methods:{},
+    }
 
 }
 </script>

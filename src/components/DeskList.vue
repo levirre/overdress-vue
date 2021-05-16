@@ -43,6 +43,7 @@ import Deck from './Deck'
 
 export default {
     name: "CardDetails",
+    props:["set"],
     components:{
         Deck
     },
@@ -57,7 +58,7 @@ export default {
     },
     methods:{
         clickDeck(){
-            console.log(store.state.deck)
+            console.log(this.$props.set.NAME)
         },
         subCount(){
             store.subCount()
