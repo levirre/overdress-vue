@@ -6,9 +6,10 @@
                 <span id="deck_count"> {{deck_count}}/{{deck_max}}</span>
                 <div class="ruler"></div>
             </div>
-            <div id="deck_list">
-                
-                <div class="card">
+            <div id="deck_list" v-for="cards in deck" v-bind:key="cards.id">
+                <Deck/>
+                <!--
+                <div @click="clickDeck" class="card">
                     <div class="material-icons card-remove">horizontal_rule</div>
                     <div class="CardGrade">3</div>
                     <div class="CardName"><span class="spanName">Hades Dragon Deity of Resentment, Gallmageheld </span> </div>
@@ -20,7 +21,7 @@
                     <div class="CardName"><span class="spanName">Varina Valiente</span> </div>
                     <div class="CardAmount">4</div>
                 </div>
-                
+                -->
             </div>
         </div>
 
@@ -33,21 +34,34 @@ Post submit? => counter function for each card
 if 0, remove
 max 4
 {"NAME",COUNT}
-
-
-
+Just read from deck{} store
+Need component to render for each card in deck{} store
+loop with v-for
 */
-
+import store from '../store'
+import Deck from './Deck'
 
 export default {
     name: "CardDetails",
+    components:{
+        Deck
+    },
     data: function () {
         return {
             deck_count: 0,
-            deck_max: 50
+            deck_max: 50,
+            deck: store.state.deck
 
         }
 
+    },
+    methods:{
+        clickDeck(){
+            console.log(store.state.deck)
+        },
+        subCount(){
+            store.subCount()
+        }
     }
 }
 </script>
