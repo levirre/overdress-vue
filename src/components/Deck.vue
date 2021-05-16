@@ -1,8 +1,8 @@
 <template>
-<div @click="deckList" class="card">
+<div class="card">
     <div class="material-icons card-remove">horizontal_rule</div>
     <div class="CardGrade">3</div>
-    <div class="CardName"><span class="spanName">Hades Dragon Deity of Resentment, Gallmageheld </span> </div>
+    <div class="CardName"><span class="spanName">{{name}} </span> </div>
     <div class="CardAmount">4</div>
 </div>
 </template>
@@ -12,6 +12,7 @@ import store from '../store'
 
 export default {
     name:"Deck",
+    props: ["name"],
     data: function(){
         return {
             deck: store.state.deck

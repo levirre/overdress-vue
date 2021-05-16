@@ -23,7 +23,10 @@ export default {
             return require(`../img/${SET}/${ID}.webp`)
         },
         increment(){
-            store.state.deck[`"${this.$props.set.NAME}"`] = this.counter
+            //let addcard = {}
+            //addcard[`"${this.$props.set.NAME}"`] = this.counter
+            //store.state.deck.push(addcard)
+            store.state.deck[`"${this.$props.set.NAME}"`] = this.counter 
             console.log(store.state.deck)
             //access amount with store.state.deck[`"${this.$props.set.NAME}"`] to match key to value
             //console.log(store.state.deck[`"${this.$props.set.NAME}"`])

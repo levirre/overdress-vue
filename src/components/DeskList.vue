@@ -6,22 +6,14 @@
                 <span id="deck_count"> {{deck_count}}/{{deck_max}}</span>
                 <div class="ruler"></div>
             </div>
-            <div id="deck_list" v-for="cards in deck" v-bind:key="cards.id">
-                <Deck/>
-                <!--
+            
+            <div id="deck_list" v-for="(count,name) in deck" v-bind:key="name">
                 <div @click="clickDeck" class="card">
-                    <div class="material-icons card-remove">horizontal_rule</div>
-                    <div class="CardGrade">3</div>
-                    <div class="CardName"><span class="spanName">Hades Dragon Deity of Resentment, Gallmageheld </span> </div>
-                    <div class="CardAmount">4</div>
+                    <div @click="subCount(name)" class="material-icons card-remove">horizontal_rule</div>
+                    <!--<div class="CardGrade">3</div> -->
+                    <span class="spanName">{{name}}</span>
+                    <div @click="addCount(name)" class="CardAmount">{{count}}</div>
                 </div>
-                <div class="card">
-                    <div class="material-icons">horizontal_rule</div>
-                    <div class="CardGrade">3</div>
-                    <div class="CardName"><span class="spanName">Varina Valiente</span> </div>
-                    <div class="CardAmount">4</div>
-                </div>
-                -->
             </div>
         </div>
 
@@ -39,30 +31,45 @@ Need component to render for each card in deck{} store
 loop with v-for
 */
 import store from '../store'
-import Deck from './Deck'
+//import Deck from './Deck.vue'
 
 export default {
     name: "CardDetails",
-    props:["set"],
     components:{
-        Deck
+        //Deck
     },
     data: function () {
         return {
-            deck_count: 0,
+            
             deck_max: 50,
             deck: store.state.deck
-
         }
 
     },
     methods:{
-        clickDeck(){
-            console.log(this.$props.set.NAME)
+        
+        subCount(name){
+            store.subCount(name)
+            console.log(store.state.deck)
+            
         },
-        subCount(){
-            store.subCount()
+        addCount(name){
+            store.addCount(name)
+            console.log(store.state.deck)
         }
+
+    },
+    computed:{
+        deck_count(){
+            let deck_count = 0;
+            for(let i in store.state.deck){
+                deck_count +=store.state.deck[i]
+
+            }
+            return deck_count
+            //return store.state.deck.length
+        },
+        
     }
 }
 </script>
@@ -131,28 +138,46 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 20px;
+    font-size:100%;
     align-items: center;
-    margin-bottom: .1em;
+    margin-top: 1px;
     cursor: pointer;
+    
 }
 
 .CardName{
-    background-color: silver;
     
+    width: 80%;
     min-width: 80%;
     max-width: 80%;
     min-height: 48px;
     max-height: 48px;
-    
-    
+    opacity: 50%;
 }
+
+
+.spanName::before {
+    opacity: 40%;
+    /*background-image: url('../img/D-SD01/D-SD01-001.webp');*/
+    
+    background-image: url('../img/D-SD01/D-SD01-001.webp');
+}
+
+.spanName{
+    background-color:slateblue;
+    line-height: 3em;
+    min-width: 80%;
+}
+
+
+
 .CardAmount ,.CardGrade{
     
     min-width: 16px;
     min-height: 100%;
     max-height: 100%;
 }
+
 
 
 </style>

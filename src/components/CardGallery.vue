@@ -6,12 +6,10 @@
     </div>
     
     <div id="CardGallery">    
-        <keep-alive>
         <div class="CardContainer" v-for="set in filteredList" v-bind:key="set.id">
            <!--<img :src="cardRender(set.SET,set.ID)">-->
            <Card class="card" v-bind:set=set></Card>
         </div>
-        </keep-alive>
     </div>
 
 </div>
@@ -103,6 +101,7 @@ export default {
     transition: transform .2s;
     overflow:visible;
     z-index: 2;
+    
     
 }
 
