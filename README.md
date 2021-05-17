@@ -65,10 +65,15 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ```
 TODO: 
+    
+    Setup offline database to stop making reads every refresh
     setup filter name/effect/ID
     show english effect on side
-    Click Card => push to some dictionary/array => Display array in DeskList.vue
+    x Click Card => push to some dictionary/array => Display array in DeskList.vue
     Ability to save decklists, upload decklists, open decklists
     Library of desklists, Sharing decklists by URL
+
+
     
 ```
+
