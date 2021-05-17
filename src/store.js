@@ -4,7 +4,8 @@ const store ={
     
     state: reactive({
         deck:{},
-        count:0
+        decksize: 0,
+        init_count:3
     }),
     subCount(name){
         const min = 0;
@@ -21,6 +22,16 @@ const store ={
         const max = 4;
         const num = this.state.deck[name]
         this.state.deck[name] = Math.min(Math.max(num +1,min),max)
+        
+    },
+    addCard(name){
+        const init_count = 4;
+        
+        this.state.deck[`"${name}"`] = init_count
+        
+    },
+    getdeckSize(){
+        return this.state.decksize
     }
 
 }

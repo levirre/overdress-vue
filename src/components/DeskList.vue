@@ -11,7 +11,7 @@
                 <div @click="clickDeck" class="card">
                     <div @click="subCount(name)" class="material-icons card-remove">horizontal_rule</div>
                     <!--<div class="CardGrade">3</div> -->
-                    <span class="spanName">{{name}}</span>
+                    <span class="spanName">{{name.replace(/_/gi,' ')}}</span>
                     <div @click="addCount(name)" class="CardAmount">{{count}}</div>
                 </div>
             </div>
@@ -40,7 +40,6 @@ export default {
     },
     data: function () {
         return {
-            
             deck_max: 50,
             deck: store.state.deck
         }
@@ -50,12 +49,13 @@ export default {
         
         subCount(name){
             store.subCount(name)
-            console.log(store.state.deck)
+            
             
         },
         addCount(name){
+
             store.addCount(name)
-            console.log(store.state.deck)
+            
         }
 
     },
@@ -66,9 +66,12 @@ export default {
                 deck_count +=store.state.deck[i]
 
             }
-            return deck_count
+            store.state.decksize = deck_count
+            console.log(store.getdeckSize())
+            console.log(store.state.decksize)
+            return store.state.decksize
             //return store.state.deck.length
-        },
+        }
         
     }
 }

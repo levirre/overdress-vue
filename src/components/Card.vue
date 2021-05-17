@@ -5,13 +5,13 @@
 
 <script>
 import store from '../store'
-
+const four = 4;
 export default {
     name: 'Card',
     props:["set"],
     data(){
         return{
-            counter: 4
+            counter: four
         }
     },
     methods:{
@@ -26,8 +26,11 @@ export default {
             //let addcard = {}
             //addcard[`"${this.$props.set.NAME}"`] = this.counter
             //store.state.deck.push(addcard)
-            store.state.deck[`"${this.$props.set.NAME}"`] = this.counter 
-            console.log(store.state.deck)
+            store.addCard(this.$props.set.NAME)
+            
+            //store.state.deck[`"${this.$props.set.NAME}"`] = this.counter 
+            //console.log(store.state.deck)
+            
             //access amount with store.state.deck[`"${this.$props.set.NAME}"`] to match key to value
             //console.log(store.state.deck[`"${this.$props.set.NAME}"`])
         }
