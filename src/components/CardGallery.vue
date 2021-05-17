@@ -18,9 +18,10 @@
 
 <script>
 import Card from './Card.vue'
-import {db} from '../firebase.js'
-var cards = db.collection("cards");
+//import {db} from '../firebase.js'
+//var cards = db.collection("cards");
 import {myMixin} from './CardAssembler.js'
+import store from '../store.js'
 /*
 function cardsInit(){
     cards.get().then((snapshot) => {snapshot.forEach(doc=>{
@@ -48,7 +49,7 @@ export default {
     },
     
     created(){
-        cards.get().then(snapshot =>{
+        store.state.cardsdb.then(snapshot =>{
             snapshot.forEach(doc => {
                 const data ={
                     SET: doc.data().SET,

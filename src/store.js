@@ -1,11 +1,13 @@
 import { reactive } from "@vue/reactivity"
-
+import {db} from './firebase'
+const snapshot = db.collection('cards').get();
 const store ={
     
     state: reactive({
         deck:{},
         decksize: 0,
-        init_count:3
+        init_count:3,
+        cardsdb: snapshot
     }),
     subCount(name){
         const min = 0;

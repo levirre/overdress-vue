@@ -9,6 +9,17 @@ require("firebase/firestore");
   firebase.initializeApp(credentials);
 
 var db = firebase.firestore();
+db.enablePersistence()
+    .catch((err) =>{
+        if (err.code == 'failed-precondition'){
+            console.log('Multiple tabs open, persistence can only be enabledin one tab at a a time.')
+        } else if (err.code == 'unimplemented'){
+            console.log('The current browser does not support persistence')
+        } else {
+            console.log('offline persistence enabled')
+        }
+    })
+    
 /*
 db.collection("cards/decks/D-SD01").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
