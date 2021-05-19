@@ -3,6 +3,7 @@
     <div id="searchbar">
         <input id="input" v-model="search" placeholder="search">   
         <span class="material-icons" id="search">search</span>
+        
     </div>
     
     <div id="CardGallery">    
@@ -31,6 +32,7 @@ function cardsInit(){
 
 cardsInit()
 */
+
 export default {
     name:"CardGallery",
     mixins: [myMixin],
@@ -44,11 +46,13 @@ export default {
         counter: 0,
         search:"",
         sets:[],
+        
         }
         
-    },
+    }, 
     
     created(){
+        
         store.state.cardsdb.then(snapshot =>{
             snapshot.forEach(doc => {
                 const data ={
@@ -68,24 +72,24 @@ export default {
     
     computed: {
         
-        filteredList(){
+        filteredList: function(){
+            console.log("hello from filtered list")
             // TODO: have filter search through selected field and not just name
-            
-            return this.sets.filter(sets => {
-                return sets.NAME.toLowerCase().includes(this.search.toLowerCase())})
-        }
+            return this.sets.filter(card => {
+                return card.NAME.toLowerCase().includes(this.search.toLowerCase())})
+        },
+
     },
     methods:{
-        
-
-            addDeck: function(NAME){
-                console.log(`hello ${NAME}`)
+            addDeck: function(){
+                console.log(this.$refs)
+                
             }
         
     }
 };
-/*
 
+/*
 
 
 */

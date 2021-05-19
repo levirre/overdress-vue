@@ -1,6 +1,12 @@
 import { reactive } from "@vue/reactivity"
 import {db} from './firebase'
+
+
 const snapshot = db.collection('cards').get();
+db.disableNetwork().then(()=>{
+    console.log("Network disabled!");
+})
+
 const store ={
     
     state: reactive({

@@ -6,8 +6,8 @@ var credentials = require('../credentials.json')
 require("firebase/firestore");
 // Initialize Cloud Firestore through Firebase
   // Initialize Firebase
-  firebase.initializeApp(credentials);
-
+firebase.initializeApp(credentials);
+console.log("how often am I called")
 var db = firebase.firestore();
 db.enablePersistence()
     .catch((err) =>{
